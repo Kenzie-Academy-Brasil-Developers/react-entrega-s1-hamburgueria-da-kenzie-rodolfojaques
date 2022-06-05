@@ -1,0 +1,15 @@
+
+ul{
+
+    display: flex;
+    overflow-x: auto;
+
+    padding: 0 .6rem .6rem .6rem;
+    height: 45vh;
+    width: inherit;
+    gap: 1rem;
+    
+}
+
+
+
