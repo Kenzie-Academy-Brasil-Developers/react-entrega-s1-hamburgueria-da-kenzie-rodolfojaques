@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+@media(min-width: 820px){
+
+  .Container{
+
+    box-sizing: border-box;
+
+    padding: 1.7rem 7rem;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+}

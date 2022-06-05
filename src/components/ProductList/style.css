@@ -11,5 +11,15 @@ ul{
     
 }
 
+@media(min-width: 820px){
+
+    .ul{
+        overflow: auto;
+        flex-wrap: wrap;
+
+        height: 80vh;
+    }
+}
+
 
 

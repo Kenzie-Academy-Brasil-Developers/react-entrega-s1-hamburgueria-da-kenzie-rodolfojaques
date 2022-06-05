@@ -61,7 +61,7 @@ justify-content: space-between;
    ul{
        display: flex;
        flex-direction: column;
-       gap: .7rem;
+       gap: 7%;
    }
 
    
@@ -117,13 +117,29 @@ justify-content: space-between;
 
             color: #828282;
 
+            cursor: pointer;
        }
-   }
+    }
+    @media(min-width: 820px){
 
+        min-width: 30%;
+        width: inherit;
+        max-height: 26rem;
+        margin 1rem .3rem;
+        
+        .div__total{
+            padding: 0 .8rem;
+        }
+
+        ul{
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    }
 
 `
 
-function Cart({ currentSale,cartTotal,setCartTotal }){
+function Cart({ currentSale,cartTotal,setCartTotal,eraseCart,deleteItemCart }){
 
     return (
         <CartMain>
@@ -135,6 +151,7 @@ function Cart({ currentSale,cartTotal,setCartTotal }){
                 </div>
                 <ul>
                     {currentSale.map((produto)=> <ItemCart 
+                    deleteItemCart={deleteItemCart}
                     setCartTotal={setCartTotal}
                     currentSale={currentSale} 
                     key={produto.id} 
@@ -147,7 +164,7 @@ function Cart({ currentSale,cartTotal,setCartTotal }){
                         <h5>Total</h5>
                         <h4>R$ <span>{cartTotal.toFixed(2)}</span></h4>                        
                     </div>
-                    <button>Remover todos</button>
+                    <button onClick={eraseCart}>Remover todos</button>
                 </div>
                 
                 </>

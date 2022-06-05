@@ -1,17 +1,7 @@
 import './style.css'
 
-function Header({setFilteredProducts,products}){
+function Header({showProducts}){
 
-    const showProducts = (e)=> {
-
-        e.preventDefault()
-
-        const input = e.target.parentNode.children[0].value
-
-        const dataFilter = products.filter(item => item.name.toLowerCase().includes(input) || item.category.toLowerCase().includes(input))
-    
-        setFilteredProducts(dataFilter)
-    }
 
     return (
         <header>

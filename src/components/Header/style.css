@@ -77,5 +77,33 @@ header{
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
+
+    cursor: pointer;
+    
 }
 
+@media(min-width: 820px){
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 7.2rem;
+
+        height: 3.5rem;
+    }
+
+    .nav_bar input{
+
+        height: 2.3rem;
+        width: 21rem;        
+    }
+    
+    .nav_bar button{
+        position: absolute;
+        top: 12.8%;
+        right: 1.8%;
+
+        font-size: .86rem;
+    }
+}

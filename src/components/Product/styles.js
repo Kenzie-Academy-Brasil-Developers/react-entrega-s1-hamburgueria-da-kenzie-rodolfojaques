@@ -22,6 +22,7 @@ border-radius: .4rem;
     div{
         width: 100%;
         background: #F5F5F5;
+        border-radius: .4rem .4rem 0px 0px;
     
         img{
 
@@ -81,6 +82,33 @@ border-radius: .4rem;
         min-height: 1.8rem;
         margin-left: .7rem;
         margin-bottom: .7rem;
+
+        cursor: pointer;
+    }
+
+    @media(min-width: 820px){
+
+        min-width: 15vw;
+        max-width: 15vw;
+        height: 38vh;
+
+        div{
+            width: 100%;
+        
+            img{    
+                width: 40%;
+                height: 5rem;
+            }
+        }
+
+        h3{
+            font-size: 90%;
+        }
+
+        .category{
+
+            font-size: 76%;
+        }
     }
 
 `

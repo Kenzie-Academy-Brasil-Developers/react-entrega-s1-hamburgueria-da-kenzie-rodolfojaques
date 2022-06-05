@@ -12,9 +12,6 @@ align-items: flex-start;
 width: 100%;
 height: 33%;
 
-
-
-
     .container{
         display:flex;
         gap: .3rem;
@@ -63,7 +60,7 @@ height: 33%;
         color: #828282;
     }
 
-    span{
+    .span{
         margin-top: .3rem;
 
         font-family: 'Roboto';
@@ -71,16 +68,36 @@ height: 33%;
         font-weight: 500;
         font-size: .6rem;
 
-        color: #BDBDBD
+        color: #BDBDBD;
+        cursor: pointer;
+    }
+
+    @media(min-width: 820px){
+
+        gap: .1rem;
+
+        .span{
+            margin-top: .5rem;
+            font-size: 50%;
+        }
+
+        .div__img{
+
+            max-width: 3.5rem;
+            max-height: 3.5rem;
+        }
+
+        img{
+            max-width: 2.8rem;
+        }
     }
 `
 
-function ItemCart({ prod,setCartTotal,currentSale }){
+function ItemCart({ prod,setCartTotal,currentSale,deleteItemCart }){
 
     useEffect(()=>{
         setCartTotal(currentSale.reduce((a,b) => (a + b.price),0))
-    },[])
-
+    },[currentSale])
 
     return(
         <>
@@ -99,7 +116,7 @@ function ItemCart({ prod,setCartTotal,currentSale }){
                     <span>{prod.category}</span>
                 </div>
             </div>
-            <span>Remover</span>
+            <span onClick={deleteItemCart} className="span">Remover</span>
         </Item>
         </>
     )
