@@ -70,7 +70,7 @@ function App() {
 
     const input = e.target.parentNode.children[0].value
 
-    const dataFilter = products.filter(item => item.name.toLowerCase().includes(input) || item.category.toLowerCase().includes(input))
+    const dataFilter = products.filter(item => item.name.toLowerCase().includes(input.toLowerCase()) || item.category.toLowerCase().includes(input.toLowerCase()))
 
     setFilteredProducts(dataFilter)
   }

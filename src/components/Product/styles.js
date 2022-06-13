@@ -8,7 +8,8 @@ flex-direction: column;
 justify-content: space-between;
 align-items: flex-start;
 
-min-width: 13rem;
+min-width: 11rem;
+max-height: 22rem;
 
 list-style: none;
 border: solid #E0E0E0;
@@ -70,7 +71,7 @@ border-radius: .4rem;
         background: #27AE60;
         border: 2px solid #27AE60;
         border-radius: .5rem;
-        padding: .1rem .2rem
+        padding: .1rem .2rem;
 
         font-family: 'Roboto';
         font-style: normal;
@@ -87,10 +88,6 @@ border-radius: .4rem;
     }
 
     @media(min-width: 820px){
-
-        min-width: 15vw;
-        max-width: 15vw;
-        height: 38vh;
 
         div{
             width: 100%;
@@ -117,7 +114,7 @@ function Products({prod,handleClick}){
 
     return(
         <>
-            <Card id={prod.id}>
+            <Card className="style__card" id={prod.id}>
                 <div>
                     <img src={prod.img} alt="" />
                 </div>                
